@@ -20,35 +20,30 @@ class Mixer {
 		int final_arr[] = new int[m];
 		while (p1 < this.n && p2 < A.n) { //while both arrays have content
             if (this.arr[p1] < A.arr[p2]) {
-                if (i == 0 || final_arr[i - 1] != this.arr[p1]) {
+                if (i == 0 || final_arr[i - 1] != this.arr[p1])
                     final_arr[i++] = this.arr[p1];
-                }
                 p1++;
             } else if (this.arr[p1] > A.arr[p2]) {
-                if (i == 0 || final_arr[i - 1] != A.arr[p2]) {
+                if (i == 0 || final_arr[i - 1] != A.arr[p2])
                     final_arr[i++] = A.arr[p2];
-                }
                 p2++;
             } else {
-                if (i == 0 || final_arr[i - 1] != this.arr[p1]) {
+                if (i == 0 || final_arr[i - 1] != this.arr[p1])
                     final_arr[i++] = this.arr[p1];
-                }
                 p1++;
                 p2++;
             }
         }
 
         while (p1 < this.n) {
-            if (i == 0 || final_arr[i - 1] != this.arr[p1]) {
+            if (i == 0 || final_arr[i - 1] != this.arr[p1])
                 final_arr[i++] = this.arr[p1];
-            }
             p1++;
         }
 
         while (p2 < A.n) {
-            if (i == 0 || final_arr[i - 1] != A.arr[p2]) {
+            if (i == 0 || final_arr[i - 1] != A.arr[p2])
                 final_arr[i++] = A.arr[p2];
-            }
             p2++;
         }
         this.n = i;
@@ -95,4 +90,3 @@ enter size of array 2: 3
 enter the elements of array 2: 2 2 3
 the elements of the merged array are: 1 2 3
 */
-
