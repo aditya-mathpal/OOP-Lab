@@ -64,3 +64,32 @@ class BankAccDemo {
 		}
 	}
 }
+/*
+Account holder name: null
+Account number: null
+Account Type: null
+Balance: 0.0
+
+Account holder name: A
+Account number: 230905
+Account Type: Savings
+Balance: 100000.0
+
+Mr A, enter 1 to deposit, 2 to withdraw, 3 to display bank details, 4 to display rate of interest, 5 to exit: 1
+Enter amount to deposit: 
+5000
+Mr A, enter 1 to deposit, 2 to withdraw, 3 to display bank details, 4 to display rate of interest, 5 to exit: 2
+Account balance is 105000.0, 104000.0 over minimum balance.
+Maximum withdrawal can be 104000.0.
+Enter withdrawal amount: 
+4000
+4000 INR have been withdrawn.
+Mr A, enter 1 to deposit, 2 to withdraw, 3 to display bank details, 4 to display rate of interest, 5 to exit: 3
+Account holder name: A
+Account number: 230905
+Account Type: Savings
+Balance: 101000.0
+
+Mr A, enter 1 to deposit, 2 to withdraw, 3 to display bank details, 4 to display rate of interest, 5 to exit: 4
+The rate of interest is 5.0
+*/

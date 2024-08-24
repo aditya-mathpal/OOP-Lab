@@ -18,3 +18,8 @@ class CounterDemo {
         Counter.showCount();
 	}
 }
+
+/*
+The number of Counter objects created is 3
+The number of Counter objects created is 4
+*/
