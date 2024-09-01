@@ -1,3 +1,5 @@
+//Q1
+
 import java.util.Scanner;
 class Employee {
 	Scanner sc = new Scanner(System.in);
@@ -57,6 +59,7 @@ class EmpDemo {
 		}
 		for(i=0;i<n;i++)
 			e[i].display();
+		sc.close();
 	}
 }
 

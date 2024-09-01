@@ -1,3 +1,5 @@
+//Q2
+
 import java.util.Scanner;
 
 class Student {
@@ -76,7 +78,7 @@ class StudentDemo {
 		int n = sc.nextInt();
 		sc.nextLine();
 		Student s[] = new Student[n];
-		int i,j;
+		int i;
 		for(i=0;i<n;i++) {
 			s[i] = new Student();
 			s[i].assign(i);
@@ -99,6 +101,7 @@ class StudentDemo {
         System.out.println("Students with names containing \"" + substring + "\":");
         for (String name : namesContainingSubstring)
             System.out.println(name);
+        sc.close();
 	}
 }
 /*
