@@ -32,9 +32,9 @@ class Student {
 	void setTotal(double total) {
 		this.total = total;
 	}
-
 }
 
+//added class
 class ScienceStudent extends Student {
 	private int practicalMarks;
 	private double total, avg;
@@ -53,6 +53,7 @@ class ScienceStudent extends Student {
 	}
 }
 
+//added class
 class ArtsStudent extends Student {
 	private String electiveSubject;
 	ArtsStudent(String name, double arr[], String electiveSubject) {
@@ -64,6 +65,7 @@ class ArtsStudent extends Student {
 	}
 }
 
+//changes here
 class StudentDemo {
 	public static void main(String args[]) {
 		double[] sMarks = {50,60,70}, ssMarks = {40,50,60}, asMarks = {60,70,80};
