@@ -32,6 +32,9 @@ class Student {
 	void setTotal(double total) {
 		this.total = total;
 	}
+	double[] getMarks() {
+		return marks_array;
+	}
 }
 
 //added class
@@ -49,7 +52,15 @@ class ScienceStudent extends Student {
 		this.avg = this.total/4;
 	}
 	void displayPracticalMarks() {
-		System.out.println("Name: " + getName() + "\nPractical marks: " + this.practicalMarks + "\n");
+		System.out.println("Name: " + getName() + "\nPractical marks: " + this.practicalMarks);
+	}
+	void display() {
+		System.out.println("Theory marks:");
+		int i;
+		double marks[] = getMarks();
+		for(i=0;i<3;i++)
+			System.out.println("Subject " + (i+1) + ": "+ marks[i]);
+		System.out.println("Total marks: " + this.total + "\navg marks: " + this.avg + "\n");
 	}
 }
 
@@ -75,8 +86,8 @@ class StudentDemo {
 		s.compute();
 		s.display();
 		ss.compute();
-		ss.display();
 		ss.displayPracticalMarks();
+		ss.display();
 		as.displayElectiveSubject();
 	}
 }
