@@ -1,19 +1,13 @@
 import java.util.*;
 import java.io.*;
 
-class StackException extends Exception {
-	public StackException(String message) {
-		super(message);
-	}
-}
-
-class PushException extends StackException {
+class PushException extends Exception {
 	public PushException() {
 		super("Stack is full.");
 	}
 }
 
-class PopException extends StackException {
+class PopException extends Exception {
     public PopException() {
         super("Stack is empty.");
     }
