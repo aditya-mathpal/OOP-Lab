@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class SeatsFilledException extends Exception {
 	public SeatsFilledException() {
@@ -38,3 +37,12 @@ public class StudentDemo {
 		if(valid == true) s.displayDetails();
 	}
 }
+
+/*
+output:
+Enter student name: 
+Aditya
+Enter student registration number:
+2326
+Exception: All seats are filled.
+*/
