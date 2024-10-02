@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class PushException extends Exception {
 	public PushException() {
@@ -14,7 +13,7 @@ class PopException extends Exception {
 }
 
 class Stack {
-	private int arr[];
+	private final int arr[];
 	private int top;
 
 	public Stack() {
@@ -71,14 +70,12 @@ public class StackExceptions {
 					s.display();
 					break;
 				case "exit":
+					sc.close();
 					return;
 				}
 			}
-			catch (PushException e) {
+			catch (PushException | PopException e) {
 			System.out.println("Exception: " + e.getMessage());
-			}
-			catch (PopException e) {
-				System.out.println("Exception: " + e.getMessage());
 			}
 		}
 	}
