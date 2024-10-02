@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class InvalidDayException extends Exception {
 	public InvalidDayException() {
@@ -45,10 +44,7 @@ public class CurrentDateDemo {
 			d.createDate();
 			d.displayDate();
 		}
-		catch(InvalidDayException e) {
-			System.out.println("Exception: " + e.getMessage());
-		}
-		catch(InvalidMonthException e) {
+		catch(InvalidDayException | InvalidMonthException e) {
 			System.out.println("Exception: " + e.getMessage());
 		}
 	}
