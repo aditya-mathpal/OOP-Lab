@@ -29,6 +29,12 @@ class MatrixRowSum {
         for (int i = 0;i<rows;i++)
             for (int j = 0;j<cols;j++)
                 matrix[i][j] = sc.nextInt();
+        System.out.println("Matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++)
+                System.out.print(matrix[i][j] + " ");
+            System.out.println();
+        }
 
         NewThread threads[] = new NewThread[rows];
 
@@ -41,7 +47,9 @@ class MatrixRowSum {
         for (int i = 0; i < rows; i++) {
             try {
                 threads[i].t.join();
-                totalSum += threads[i].getSum();
+                int rowSum = threads[i].getSum();
+                System.out.println("Sum of row " + (i + 1) + ": " + rowSum);
+                totalSum += rowSum;
             }
             catch (InterruptedException e) {}
         }
@@ -52,8 +60,15 @@ class MatrixRowSum {
 
 /*
 output:
-Enter the number of rows and columns: 2 2
+Enter the number of rows and columns: 3 3
 Enter the elements of the matrix:
-1 2 3 4  
-Total sum of the matrix is 10
+1 2 3 4 5 6 7 8 9
+Matrix:
+1 2 3 
+4 5 6 
+7 8 9 
+Sum of row 1: 6
+Sum of row 2: 15
+Sum of row 3: 24
+Total sum of the matrix is 45
 */
