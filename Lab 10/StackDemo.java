@@ -1,4 +1,3 @@
-
 class Stack<T> {
     private T arr[];
     private int top, size;
@@ -23,6 +22,21 @@ class Stack<T> {
         }
         return arr[top--];
     }
+    public void display() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Stack contents:");
+        for (int i = 0;i<=top;i++) {
+            if (arr[i] instanceof Student) {
+                ((Student)arr[i]).display();
+            }
+            else if (arr[i] instanceof Employee) {
+                ((Employee)arr[i]).display();
+            }
+        }
+    }
     public int getTop() {
         return top;
     }
@@ -38,12 +52,7 @@ class Student {
     }
     
     public void display() {
-        if(getTop()==-1) {
-            System.out.println("Stack is empty");
-            return;
-        }
-        System.out.print("Stack contents: ");
-        System.out.println("Name: " + this.name + "\nRoll No. " + this.rollNum);
+        System.out.println("Student name: " + this.name + "\nRoll No. " + this.rollNum);
     }
 }
 
@@ -57,7 +66,7 @@ class Employee {
     }
     
     public void display() {
-        System.out.println("Name: " + this.name + "\nEmployee ID: " + this.empID);
+        System.out.println("Employee name: " + this.name + "\nEmployee ID: " + this.empID);
     }
 }
 
@@ -65,10 +74,19 @@ public class StackDemo {
     public static void main(String[] args) {
         Stack<Student> s = new Stack<>(1);
         Stack<Employee> e = new Stack<>(1);
-        s.push(new Student("Aditya"    ,37));
+        s.push(new Student("Aditya",37));
         e.push(new Employee("Aditya",230905));
-        s.display();    
+        s.display();
         e.display();
     }
 }
 
+/*
+output:
+Stack contents:
+Student name: Aditya
+Roll No. 37
+Stack contents:
+Employee name: Aditya
+Employee ID: 230905
+*/
